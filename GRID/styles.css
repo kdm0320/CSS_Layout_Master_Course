@@ -1,17 +1,24 @@
-.wrapper {
+.grid {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
-  grid-template-rows: 100px 50px 300px;
-  column-gap: 5px;
-  row-gap: 10px;
+  gap: 10px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
 }
 
-.child {
-  flex-basis: 30%;
-  background: peru;
-  color: white;
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header {
+  background-color: #2ecc71;
+  grid-column: span 4; /*span shortcut*/
+}
+.content {
+  background-color: #3498db;
+  grid-column: 1 / -2;
+  grid-row: span 2;
+}
+.nav {
+  background-color: #8e44ad;
+  grid-row: span 2;
+}
+.footer {
+  background-color: #f39c12;
+  grid-column: span 4;
 }
