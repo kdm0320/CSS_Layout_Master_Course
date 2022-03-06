@@ -1,0 +1,17 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-template-rows: 100px 50px 300px;
+  column-gap: 5px;
+  row-gap: 10px;
+}
+
+.child {
+  flex-basis: 30%;
+  background: peru;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
