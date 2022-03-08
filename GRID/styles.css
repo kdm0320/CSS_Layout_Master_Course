@@ -1,23 +1,17 @@
 .grid {
   display: grid;
   gap: 5px;
-  height: 250vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
-  place-content: end center;
-  /* justify-content: space-between;
-  align-content: center; */
+  /*계획되지 않은 데이터로 인해 css가 망가질때 자동으로 설정*/
+  grid-auto-flow: column; /*like flex-direction*/
+  grid-auto-columns: 100px;
+  grid-auto-rows: 100px;
 }
 
-.header {
+.item:nth-child(odd) {
   background-color: #2ecc71;
 }
-.content {
+.item:nth-child(even) {
   background-color: #3498db;
-}
-.nav {
-  background-color: #8e44ad;
-}
-.footer {
-  background-color: #f39c12;
 }
